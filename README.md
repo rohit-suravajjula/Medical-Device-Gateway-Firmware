@@ -21,4 +21,5 @@ The project is built step by step, starting from requirements and system archite
 
 - ✅ Requirements
 - ✅ System Architecture
-- ⏳ Firmware Boundary
+- ✅ Firmware Boundary
+- ⏳ Firmware Architecture
