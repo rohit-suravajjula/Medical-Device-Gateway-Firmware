@@ -9,7 +9,7 @@ Understand the complete system before writing the firmware.
 Medical Machine
       |
       ▼
-Embedded Firmware
+  Firmware
       |
       ▼
 Communication
