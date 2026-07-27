@@ -14,7 +14,10 @@ ESP32 Firmware
       |
       ▼
 External System
-Firmware Flow
+```
+## Firmware Flow
+
+```text
 Receiving Module
       |
       ▼
