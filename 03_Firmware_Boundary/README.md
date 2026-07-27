@@ -10,7 +10,7 @@ Define firmware responsibility and divide firmware functions into separate modul
 Medical Machine
       | 
       ▼ 
-ESP32 Firmware
+   Firmware
       |
       ▼
 External System
