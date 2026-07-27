@@ -7,13 +7,17 @@ Understand the complete system before writing the firmware.
 ## Architecture
 
 Medical Machine
-      ↓
+      |
+      ▼
 Embedded Firmware
-      ↓
+      |
+      ▼
 Communication
-      ↓
+      |
+      ▼
 PC Software
-      ↓
+      |
+      ▼
 User Interface
 
 ## Responsibilities
