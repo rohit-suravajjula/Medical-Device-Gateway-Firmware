@@ -5,7 +5,7 @@
 Understand the complete system before writing the firmware.
 
 ## Architecture
-
+```text
 Medical Machine
       |
       ▼
@@ -19,7 +19,7 @@ PC Software
       |
       ▼
 User Interface
-
+```
 ## Responsibilities
 
 ### Medical Machine
