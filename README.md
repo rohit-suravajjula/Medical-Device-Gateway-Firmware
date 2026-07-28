@@ -24,4 +24,5 @@ The project is built step by step, starting from requirements and system archite
 - ✅ Firmware Boundary
 - ✅ Firmware Architecture
 - ✅ RTOS Architecture
-- ⏳ Module Design
+- ✅ Module Design
+- ⏳ Firmware Implementation
