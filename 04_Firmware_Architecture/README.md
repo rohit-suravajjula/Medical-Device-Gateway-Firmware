@@ -47,12 +47,13 @@ Hardware
 
 ```text
 Application Layer
-    └── Validation Module
+    └── Firmware Control
 
 Service Layer
     ├── Receiving Module
     ├── Parser Module
-    └── Transmit Module
+    ├── Transmit Module
+    └── Network Module
 
 HAL
     └── Hardware Interface
