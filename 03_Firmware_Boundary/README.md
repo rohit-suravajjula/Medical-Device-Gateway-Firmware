@@ -8,13 +8,14 @@ Define firmware responsibility and divide firmware functions into separate modul
 
 ```text
 Medical Machine
-      | 
-      ▼ 
+      |
+      ▼
    Firmware
       |
       ▼
 External System
 ```
+
 ## Firmware Flow
 
 ```text
@@ -24,24 +25,26 @@ Receiving Module
 Parser Module
       |
       ▼
-Validation Module
+Transmit Module
       |
       ▼
-Transmit Module
+Network Module
 ```
+
 ## Responsibilities
 
 ### Receiving Module
 - Receives data from the medical machine.
 - Collects incoming data.
+- Detects complete data frames.
 
 ### Parser Module
-- Converts raw data into meaningful data.
+- Converts raw data into a structured format.
 - Extracts required information.
 
-### Validation Module
-- Checks data correctness.
-- Verifies received data.
-
 ### Transmit Module
-- Sends processed data to the external system.
+- Forwards parsed data to the Network Module.
+
+### Network Module
+- Sends data to the external system.
+- Handles network communication.
