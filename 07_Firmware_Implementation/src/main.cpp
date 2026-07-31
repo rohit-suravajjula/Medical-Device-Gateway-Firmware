@@ -9,8 +9,6 @@
 #include "receiving_task.h"
 #include "parser_task.h"
 #include "transmit_task.h"
-#include "parser_task.h"
-#include "transmit_task.h"
 #include "network_task.h"
 
 /* Queue Handles */
