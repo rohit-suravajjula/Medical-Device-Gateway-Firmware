@@ -6,11 +6,20 @@
 
 #include "transmit_task.h"
 
+/*===============================
+  Transmit Task
+================================*/
 void TransmitTask(void *pvParameters)
 {
+    DataPacket packet;
+
     while (1)
     {
-        
-        vTaskDelay(1); 
+        if (xQueueReceive(parserQueue, &packet, portMAX_DELAY) == pdTRUE)
+        {
+            xQueueSend(transmitQueue,
+                       &packet,
+                       portMAX_DELAY);
+        }
     }
 }

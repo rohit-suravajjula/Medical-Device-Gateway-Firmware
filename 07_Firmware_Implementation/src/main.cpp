@@ -1,5 +1,8 @@
 #include <Arduino.h>
 
+#include <WiFi.h>
+#include "EspUsbHost.h>
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"

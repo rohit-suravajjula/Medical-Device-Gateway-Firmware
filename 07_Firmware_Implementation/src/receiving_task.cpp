@@ -6,6 +6,11 @@
 
 #include "receiving_task.h"
 
+char receiveBuffer[500];
+uint16_t bufferIndex = 0;
+uint8_t receivedByte;
+bool packetComplete = false;
+
 void ReceivingTask(void *pvParameters)
 {
     while (1)
