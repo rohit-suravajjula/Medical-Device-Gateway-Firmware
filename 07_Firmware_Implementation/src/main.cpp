@@ -57,6 +57,43 @@ xTaskCreate(
     4,
     &receivingTaskHandle
 );
+
+/*************************************************************************
+ * Create Parser Task
+*************************************************************************/
+xTaskCreate(
+    ParserTask,
+    "ParserTask",
+    4096,
+    NULL,
+    3,
+    &parserTaskHandle
+);
+
+/*************************************************************************
+ * Create Transmit Task
+*************************************************************************/
+xTaskCreate(
+    TransmitTask,
+    "TransmitTask",
+    4096,
+    NULL,
+    2,
+    &TransmitTaskHandle
+);
+
+/*************************************************************************
+ * Create Parser Task
+*************************************************************************/
+xTaskCreate(
+    NetworkTask,
+    "NetworkTask",
+    4096,
+    NULL,
+    1,
+    &NetworkTaskHandle
+);
+
 }
 
 void loop()
