@@ -1,5 +1,9 @@
 #include <Arduino.h>
 
+#include <WiFi.h>
+#include "EspUsbHost.h"
+#include "data_packet.h"
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
@@ -9,6 +13,8 @@
 #define ANALYZER_VID   0x0483
 #define ANALYZER_PID   0x5740
 #define ANALYZER_BAUD  115200
+
+extern QueueHandle_t receiveQueue;
 
 EspUsbHost usb;
 EspUsbHostCdcSerial CdcSerial(usb);
@@ -20,8 +26,8 @@ bool packetComplete = false;
 
 void ReceivingTask(void *pvParameters)
 {
-    usb.onDeviceConnected(onAnalyzerConnected);
-    usb.onDeviceDisconnected(onAnalyzerDisconnected);
+  //usb.onDeviceConnected(onAnalyzerConnected);
+  //usb.onDeviceDisconnected(onAnalyzerDisconnected);
 
     if (!usb.begin())
     {

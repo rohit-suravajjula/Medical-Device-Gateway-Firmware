@@ -1,10 +1,16 @@
 #include <Arduino.h>
 
+#include <WiFi.h>
+
+
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/queue.h"
 
 #include "network_task.h"
+#include "data_packet.h"
+
+extern QueueHandle_t transmitQueue;
 
 /*===============================
   Network Task

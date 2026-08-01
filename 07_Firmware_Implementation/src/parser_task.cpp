@@ -5,6 +5,10 @@
 #include "freertos/queue.h"
 
 #include "parser_task.h"
+#include "data_packet.h"
+
+extern QueueHandle_t receiveQueue;
+extern QueueHandle_t parserQueue;
 
 void ParserTask(void *pvParameters)
 {

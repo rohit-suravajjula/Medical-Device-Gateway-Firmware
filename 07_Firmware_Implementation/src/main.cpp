@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 #include <WiFi.h>
-#include "EspUsbHost.h>
+#include "EspUsbHost.h"
 
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
@@ -37,7 +37,7 @@ void setup()
 /**************************************************************************
  * Create Receive Queue
  *************************************************************************/
-receiveQueue = xQueueCreate(500, sizeof(uint8_t));
+receiveQueue = xQueueCreate(10, sizeof(DataPacket));
 
 /**************************************************************************
  * Create Parser Queue
@@ -82,7 +82,7 @@ xTaskCreate(
     4096,
     NULL,
     2,
-    &TransmitTaskHandle
+    &transmitTaskHandle
 );
 
 /*************************************************************************
@@ -94,7 +94,7 @@ xTaskCreate(
     4096,
     NULL,
     1,
-    &NetworkTaskHandle
+    &networkTaskHandle
 );
 
 }

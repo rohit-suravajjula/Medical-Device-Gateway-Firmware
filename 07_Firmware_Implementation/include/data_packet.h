@@ -1,5 +1,8 @@
 #ifndef DATA_PACKET_H
 #define DATA_PACKET_H
+
+#include <stdint.h>
+
 #define MAX_PACKET_SIZE 500
 
 typedef struct 

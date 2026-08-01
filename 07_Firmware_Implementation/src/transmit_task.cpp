@@ -5,6 +5,10 @@
 #include "freertos/queue.h"
 
 #include "transmit_task.h"
+#include "data_packet.h"
+
+extern QueueHandle_t parserQueue;
+extern QueueHandle_t transmitQueue;
 
 /*===============================
   Transmit Task
